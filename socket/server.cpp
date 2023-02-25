@@ -30,7 +30,7 @@ int main() {
     socklen_t clnt_addr_len = sizeof(clnt_addr);
     bzero(&clnt_addr, sizeof(clnt_addr));
 
-	// 接受一个客户端的连接 成功返回0 失败
+	// 接受一个客户端的连接 成功返回 失败返回-1
     int clnt_fd = accept(serv_fd, (sockaddr*)&clnt_addr, &clnt_addr_len);
 
 	char buf[1024];     //定义缓冲区
